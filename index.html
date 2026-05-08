@@ -4,177 +4,279 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Klux Games</title>
-
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 
-body{
-margin:0;
-background:#0a0a0a;
-font-family:Arial,sans-serif;
-color:white;
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header{
-text-align:center;
-padding:40px;
-font-size:48px;
-font-weight:bold;
-color:#00ffff;
-text-shadow:0 0 20px #00ffff;
+body {
+  background: #f8f7f4;
+  font-family: 'DM Sans', sans-serif;
+  color: #1a1a1a;
 }
 
-.games-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-padding:30px;
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e3df;
+  padding: 28px 40px;
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
 }
 
-.game-card{
-background:#111;
-border:2px solid #00ffff;
-border-radius:20px;
-overflow:hidden;
-text-decoration:none;
-transition:0.3s;
-box-shadow:0 0 15px rgba(0,255,255,0.4);
-display:block;
+header h1 {
+  font-family: 'DM Mono', monospace;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
 }
 
-.game-card:hover{
-transform:scale(1.04);
-box-shadow:0 0 35px rgba(255,255,255,0.9);
+header span {
+  font-size: 13px;
+  color: #888;
+  font-weight: 400;
 }
 
-.game-image{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-background:black;
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1px;
+  background: #e5e3df;
+  margin: 32px;
+  border: 1px solid #e5e3df;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.game-title{
-padding:18px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
-color:white;
+.game-card {
+  background: #ffffff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: background 0.15s;
+  overflow: hidden;
+}
+
+.game-card:hover {
+  background: #f0eee9;
+}
+
+.game-card:hover .game-image {
+  opacity: 0.9;
+}
+
+.game-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.15s;
+  background: #f0eee9;
+}
+
+.game-info {
+  padding: 16px 18px;
+  border-top: 1px solid #f0eee9;
+}
+
+.game-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: -0.1px;
+}
+
+.game-tag {
+  margin-top: 5px;
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  color: #aaa;
+  text-transform: lowercase;
 }
 
 </style>
 </head>
-
 <body>
 
-<header>🎮 Klux Games</header>
+<header>
+  <h1>Klux Games</h1>
+  <span>21 games</span>
+</header>
 
 <div class="games-grid">
 
-<a class="game-card" href="https://sites.google.com/view/klux/space-waves" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/0/09/Black_hole_-_Messier_87_crop_max_res.jpg">
-<div class="game-title">🚀 Space Waves</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/space-waves" target="_blank">
+    <img class="game-image" src="images/space-waves.png" alt="Space Waves">
+    <div class="game-info">
+      <div class="game-title">Space Waves</div>
+      <div class="game-tag">arcade</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/stickman-hook" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/3/32/Stick_Figure.svg">
-<div class="game-title">🕸 Stickman Hook</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/stickman-hook" target="_blank">
+    <img class="game-image" src="images/stickman-hook.png" alt="Stickman Hook">
+    <div class="game-info">
+      <div class="game-title">Stickman Hook</div>
+      <div class="game-tag">platformer</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/shell-shockers" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Fried_Egg_2.jpg">
-<div class="game-title">🥚 Shell Shockers</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/shell-shockers" target="_blank">
+    <img class="game-image" src="images/shell-shockers.png" alt="Shell Shockers">
+    <div class="game-info">
+      <div class="game-title">Shell Shockers</div>
+      <div class="game-tag">shooter</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/throw-a-potato" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Potato.jpg">
-<div class="game-title">🥔 Throw A Potato</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/throw-a-potato" target="_blank">
+    <img class="game-image" src="images/throw-a-potato.png" alt="Throw A Potato">
+    <div class="game-info">
+      <div class="game-title">Throw A Potato</div>
+      <div class="game-tag">casual</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/awesome-tanks-2" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Leopard_2_A5_der_Bundeswehr.jpg">
-<div class="game-title">💥 Awesome Tanks 2</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/awesome-tanks-2" target="_blank">
+    <img class="game-image" src="images/awesome-tanks-2.png" alt="Awesome Tanks 2">
+    <div class="game-info">
+      <div class="game-title">Awesome Tanks 2</div>
+      <div class="game-tag">action</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/duck-life-4" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/3/32/Mallard2.jpg">
-<div class="game-title">🦆 Duck Life 4</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/duck-life-4" target="_blank">
+    <img class="game-image" src="images/duck-life-4.png" alt="Duck Life 4">
+    <div class="game-info">
+      <div class="game-title">Duck Life 4</div>
+      <div class="game-tag">rpg</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/duck-life" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/3/32/Mallard2.jpg">
-<div class="game-title">🦆 Duck Life</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/duck-life" target="_blank">
+    <img class="game-image" src="images/duck-life.png" alt="Duck Life">
+    <div class="game-info">
+      <div class="game-title">Duck Life</div>
+      <div class="game-tag">rpg</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/doom" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/5/57/Doom_cover_art.jpg">
-<div class="game-title">🔥 Doom</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/doom" target="_blank">
+    <img class="game-image" src="images/doom.png" alt="Doom">
+    <div class="game-info">
+      <div class="game-title">Doom</div>
+      <div class="game-tag">fps</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/ragdoll-archers" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Archery.jpg">
-<div class="game-title">🏹 Ragdoll Archers</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/ragdoll-archers" target="_blank">
+    <img class="game-image" src="images/ragdoll-archers.png" alt="Ragdoll Archers">
+    <div class="game-info">
+      <div class="game-title">Ragdoll Archers</div>
+      <div class="game-tag">physics</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/g-dash-sub-zero" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Snowflake_icon.png">
-<div class="game-title">❄ G-Dash Sub Zero</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/g-dash-sub-zero" target="_blank">
+    <img class="game-image" src="images/g-dash-sub-zero.png" alt="G-Dash Sub Zero">
+    <div class="game-info">
+      <div class="game-title">G-Dash Sub Zero</div>
+      <div class="game-tag">rhythm</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/level-devil" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/6/6a/OOjs_UI_icon_alert-destructive.svg">
-<div class="game-title">😈 Level Devil</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/level-devil" target="_blank">
+    <img class="game-image" src="images/level-devil.png" alt="Level Devil">
+    <div class="game-info">
+      <div class="game-title">Level Devil</div>
+      <div class="game-tag">platformer</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/g-dash" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/2/20/Geometry.png">
-<div class="game-title">⚡ G-Dash</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/g-dash" target="_blank">
+    <img class="game-image" src="images/g-dash.png" alt="G-Dash">
+    <div class="game-info">
+      <div class="game-title">G-Dash</div>
+      <div class="game-tag">rhythm</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/highway-runner" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Highway_401.jpg">
-<div class="game-title">🛣 Highway Runner</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/highway-runner" target="_blank">
+    <img class="game-image" src="images/highway-runner.png" alt="Highway Runner">
+    <div class="game-info">
+      <div class="game-title">Highway Runner</div>
+      <div class="game-tag">racing</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/eggy-car" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/7/70/Fried_Egg_2.jpg">
-<div class="game-title">🥚 Eggy Car</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/eggy-car" target="_blank">
+    <img class="game-image" src="images/eggy-car.png" alt="Eggy Car">
+    <div class="game-info">
+      <div class="game-title">Eggy Car</div>
+      <div class="game-tag">casual</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/fnaf-2" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/en/f/f1/Five_Nights_at_Freddy%27s_2_cover.jpg">
-<div class="game-title">🐻 FNAF 2</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/fnaf-2" target="_blank">
+    <img class="game-image" src="images/fnaf-2.png" alt="FNAF 2">
+    <div class="game-info">
+      <div class="game-title">FNAF 2</div>
+      <div class="game-tag">horror</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/getaway-shootout" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/9/92/Colt-pistol.jpg">
-<div class="game-title">🔫 Getaway Shootout</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/getaway-shootout" target="_blank">
+    <img class="game-image" src="images/getaway-shootout.png" alt="Getaway Shootout">
+    <div class="game-info">
+      <div class="game-title">Getaway Shootout</div>
+      <div class="game-tag">multiplayer</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/snow-rider" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/8/88/Skiing.jpg">
-<div class="game-title">❄ Snow Rider</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/snow-rider" target="_blank">
+    <img class="game-image" src="images/snow-rider.png" alt="Snow Rider">
+    <div class="game-info">
+      <div class="game-title">Snow Rider</div>
+      <div class="game-tag">sports</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/moto-x3m-pool-party" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/7/79/Motorcycle.jpg">
-<div class="game-title">🏍 Moto X3M Pool Party</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/moto-x3m-pool-party" target="_blank">
+    <img class="game-image" src="images/moto-x3m-pool-party.png" alt="Moto X3M Pool Party">
+    <div class="game-info">
+      <div class="game-title">Moto X3M Pool Party</div>
+      <div class="game-tag">racing</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/run-3" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Running_icon.svg">
-<div class="game-title">🏃 Run 3</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/run-3" target="_blank">
+    <img class="game-image" src="images/run-3.png" alt="Run 3">
+    <div class="game-info">
+      <div class="game-title">Run 3</div>
+      <div class="game-tag">endless runner</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/drive-mad" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/2018_Toyota_Camry_SE_front_4.10.18.jpg">
-<div class="game-title">🚗 Drive Mad</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/drive-mad" target="_blank">
+    <img class="game-image" src="images/drive-mad.png" alt="Drive Mad">
+    <div class="game-info">
+      <div class="game-title">Drive Mad</div>
+      <div class="game-tag">physics</div>
+    </div>
+  </a>
 
-<a class="game-card" href="https://sites.google.com/view/klux/polly-track" target="_blank">
-<img class="game-image" src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Race_track_icon.png">
-<div class="game-title">🏁 Polly Track</div>
-</a>
+  <a class="game-card" href="https://sites.google.com/view/klux/polly-track" target="_blank">
+    <img class="game-image" src="images/polly-track.png" alt="Polly Track">
+    <div class="game-info">
+      <div class="game-title">Polly Track</div>
+      <div class="game-tag">racing</div>
+    </div>
+  </a>
 
 </div>
 
